@@ -15,7 +15,11 @@
             placeholder="Enter email"
           ></b-form-input>
         </b-form-group>
-        <b-form-group id="input-group-2" label="Your Password:" label-for="input-2">
+        <b-form-group
+          id="input-group-2"
+          label="Your Password:"
+          label-for="input-2"
+        >
           <b-form-input
             id="input-2"
             v-model="form.password"
@@ -31,28 +35,28 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        form: {
-          email: '',
-          password: ''
-        }
-      }
-    },
-    methods: {
-      onSubmit(evt) {
-        evt.preventDefault()
-        alert(JSON.stringify(this.form))
+export default {
+  data() {
+    return {
+      form: {
+        email: "",
+        password: "",
       },
-      onReset(evt) {
-        evt.preventDefault()
-        // Reset our form values
-        this.form.email = ''
-        this.form.password = ''
-      }
-    }
-  }
+    };
+  },
+  methods: {
+    onSubmit(evt) {
+      evt.preventDefault();
+      alert(JSON.stringify(this.form));
+    },
+    onReset(evt) {
+      evt.preventDefault();
+      // Reset our form values
+      this.form.email = "";
+      this.form.password = "";
+    },
+  },
+};
 </script>
 <style>
 .login-container {

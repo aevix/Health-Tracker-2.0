@@ -1,20 +1,19 @@
 <template>
   <div id="app">
     <div class="main-container">
-      <Login msg="Welcome to My Health App"/>
+      <Login msg="Welcome to My Health App" />
     </div>
   </div>
 </template>
 
 <script>
-import Login from './components/login.vue'
-
+import Login from "./components/login.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Login
-  }
-}
+    Login,
+  },
+};
 </script>
 
 <style>
