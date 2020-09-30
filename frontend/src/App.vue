@@ -7,11 +7,26 @@
 </template>
 
 <script>
-import Login from "./components/login.vue";
+import Login from "./components/login";
+import axios from "axios";
+
 export default {
   name: "App",
+  data() {
+    return {};
+  },
   components: {
     Login,
+  },
+  created() {
+    this.getData();
+  },
+  methods: {
+    getData() {
+      axios.get("http://localhost:3000/hello").then((res) => {
+        console.log(res.data);
+      });
+    },
   },
 };
 </script>
