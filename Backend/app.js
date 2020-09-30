@@ -1,14 +1,18 @@
-const http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
+const router = require('./controllers/router');
+const app = express();
+const bcrypt = require('bcrypt');
+const flash = require('express-flash');
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
+var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+router(app,express, urlencodedParser,bcrypt, flash);
+
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://${hostname}:${port}`)
+})
