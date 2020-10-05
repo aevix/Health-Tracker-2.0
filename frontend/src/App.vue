@@ -1,46 +1,37 @@
 <template>
   <div id="app">
-    <div class="main-container">
-      <Login msg="Welcome to My Health App" />
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/login">Login</router-link>
     </div>
+    <router-view />
   </div>
 </template>
 
-<script>
-import Login from "./components/login";
-import axios from "axios";
-
-export default {
-  name: "App",
-  data() {
-    return {};
-  },
-  components: {
-    Login,
-  },
-  created() {
-    this.getData();
-  },
-  methods: {
-    getData() {
-      axios.get("http://localhost:3000/hello").then((res) => {
-        console.log(res.data);
-      });
-    },
-  },
-};
-</script>
-
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  text-align: center;
 }
-.main-container {
-  margin-left: 35%;
+
+.login-container {
+  display: inline-block;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
