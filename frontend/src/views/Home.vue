@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png" />
     <div class="main-container">
       <h1>Hello this is the home page!</h1>
+      <p>hello this is version testing</p>
     </div>
   </div>
 </template>
