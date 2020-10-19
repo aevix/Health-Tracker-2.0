@@ -1,6 +1,6 @@
 {
   "api": {
-    "healthtracker20": {
+    "healthdata": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -9,20 +9,12 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 365,
-              "description": "healthtracker api"
+              "description": "healthtracker"
             }
           },
           "additionalAuthenticationProviders": []
         }
       }
-    }
-  },
-  "auth": {
-    "healthtracker20f892387a": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
     }
   }
 }
