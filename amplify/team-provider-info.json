@@ -10,6 +10,11 @@
       "StackName": "amplify-healthdata-dev-30609",
       "StackId": "arn:aws:cloudformation:us-east-2:771007682576:stack/amplify-healthdata-dev-30609/1ee445f0-0df4-11eb-ab70-02226743ec12",
       "AmplifyAppId": "d38m7zvxtb4quy"
+    },
+    "categories": {
+      "auth": {
+        "healthdata9e769dca": {}
+      }
     }
   }
 }

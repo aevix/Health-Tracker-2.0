@@ -16,5 +16,13 @@
         }
       }
     }
+  },
+  "auth": {
+    "healthdata9e769dca": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
   }
 }
