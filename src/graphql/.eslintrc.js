@@ -1,6 +1,0 @@
-{
-    "ignorePatterns"; ["**/graphql"],
-    "rules"; {
-        //....
-    }
-}
