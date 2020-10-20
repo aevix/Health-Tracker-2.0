@@ -10,6 +10,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import router from "./router";
 
+import "@aws-amplify/ui-vue";
+import Amplify from "aws-amplify";
+import awsconfig from "../../src/aws-exports";
+
+Amplify.configure(awsconfig);
+
 Vue.config.productionTip = false;
 
 new Vue({

@@ -3,23 +3,20 @@
     <div id="app">
       <div id="nav">
         <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/login">Login</router-link>
+        <router-link to="/about">About</router-link>
+        <div id="button-container">
+          <amplify-sign-out></amplify-sign-out>
+        </div>
       </div>
       <router-view />
     </div>
-    <amplify-sign-out></amplify-sign-out>
   </amplify-authenticator>
 </template>
 
 <script>
-import { AmplifyAuthenticator, AmplifySignOut } from "@aws-amplify/ui-vue";
-
 export default {
-  components: {
-    AmplifyAuthenticator,
-    AmplifySignOut,
-  },
+  name: "HealthTracker",
+  components: {},
 };
 </script>
 
@@ -32,12 +29,9 @@ export default {
   text-align: center;
 }
 
-.login-container {
-  display: inline-block;
-}
-
 #nav {
   padding: 30px;
+  display: inline-block;
 
   a {
     font-weight: bold;
@@ -47,5 +41,9 @@ export default {
       color: #42b983;
     }
   }
+}
+
+#button-container {
+  width: 50px;
 }
 </style>
