@@ -1,24 +1,42 @@
 <template>
   <div class="app-container">
-    <amplify-authenticator>
-      <div id="app">
-        <div id="nav">
-          <router-link to="/"> Home </router-link> |
-          <router-link to="/about"> About </router-link>
-          <div id="button-container">
-            <amplify-sign-out></amplify-sign-out>
-          </div>
+    <div id="app">
+      <div id="nav">
+        <router-link to="/"> Home </router-link> |
+        <router-link to="/about"> About </router-link>
+        <div v-if="authState !== 'signedin'">
+          <router-link to="/profile"> Login </router-link>
         </div>
-        <router-view />
+        <div v-if="authState === 'signedin' && user">
+          <router-link to="/profile"> {{ user.username }} </router-link>
+        </div>
+        <div id="button-container"></div>
       </div>
-    </amplify-authenticator>
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
+import { onAuthUIStateChange } from "@aws-amplify/ui-components";
+
 export default {
   name: "HealthTracker",
-  components: {},
+  created() {
+    onAuthUIStateChange((authState, authData) => {
+      this.authState = authState;
+      this.user = authData;
+    });
+  },
+  data() {
+    return {
+      user: undefined,
+      authState: undefined,
+    };
+  },
+  beforeDestroy() {
+    return onAuthUIStateChange;
+  },
 };
 </script>
 
