@@ -4,15 +4,16 @@
       <div id="nav">
         <router-link to="/"> Home </router-link> |
         <router-link to="/about"> About </router-link>
-        <div v-if="authState !== 'signedin'">
+        <div class="login-profile" v-if="authState !== 'signedin'">
           <router-link to="/profile"> Login </router-link>
         </div>
-        <div v-if="authState === 'signedin' && user">
+        <div class="login-profile" v-if="authState === 'signedin' && user">
           <router-link to="/profile"> {{ user.username }} </router-link>
         </div>
-        <div id="button-container"></div>
       </div>
-      <router-view />
+      <div class="view-container">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +47,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  width: 100%;
 }
 
 .app-container {
@@ -56,8 +58,10 @@ export default {
   box-shadow: none;
 }
 
-amplify-authenticator {
-  box-shadow: none;
+.view-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 #nav {
@@ -66,14 +70,19 @@ amplify-authenticator {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background: black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #727086;
     margin: 10px;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #a5b3d1;
     }
   }
 
@@ -81,5 +90,15 @@ amplify-authenticator {
     width: 50px;
     margin: 10px;
   }
+
+  .login-profile {
+    position: absolute;
+    right: 40px;
+  }
+}
+
+form {
+  box-shadow: none;
+  border: none;
 }
 </style>
