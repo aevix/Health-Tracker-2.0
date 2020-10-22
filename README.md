@@ -6,4 +6,4 @@ My name is Yuhyun and I have always been interested in nutrition and health as f
 
 Developer note - 
 
-The app is written in Vue.js framework and hosted by AWS to handle backend support. The nutrition fact data comes from USDA API.
+The app is written in Vue.js framework and hosted by AWS to handle backend support. The nutrition fact data comes from USDA API. To get started you will need to install NPM to install all the necessary libraries and also git to work off of the master branch.
