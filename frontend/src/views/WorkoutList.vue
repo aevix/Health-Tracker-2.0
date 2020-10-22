@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <div class="d-flex flex-column justify-space-between align-center">
-      <v-img src="../assets/homeImg.jpg" :width="width" :aspect-ratio="ratio">
-      </v-img>
+    <h1>Todo App</h1>
+    <input type="text" v-model="name" placeholder="Todo name" />
+    <input type="text" v-model="description" placeholder="Todo description" />
+    <button v-on:click="createTodo">Create Todo</button>
+    <div v-for="item in todos" :key="item.id">
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.description }}</p>
     </div>
   </div>
 </template>
@@ -22,8 +26,9 @@ export default {
   },
   data() {
     return {
-      width: screen.width,
-      ratio: 16 / 9,
+      name: "",
+      description: "",
+      todos: [],
     };
   },
   methods: {
