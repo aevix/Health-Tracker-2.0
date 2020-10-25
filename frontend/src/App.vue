@@ -2,8 +2,15 @@
   <div class="app-container">
     <div id="app">
       <div id="nav">
-        <router-link to="/"> Home </router-link> |
-        <router-link to="/about"> About </router-link>
+        <v-img
+          src="./assets/logo.png"
+          max-width="70"
+          :aspect-ratio="4 / 4"
+        ></v-img>
+        <div class="router">
+          <router-link to="/"> Home </router-link> |
+          <router-link to="/about"> About </router-link>
+        </div>
         <div class="login-profile" v-if="authState !== 'signedin'">
           <router-link to="/profile"> Login </router-link>
         </div>
@@ -67,6 +74,7 @@ export default {
 #nav {
   padding: 30px;
   display: flex;
+  height: fit-content;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -74,7 +82,7 @@ export default {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  z-index: 5;
+  z-index: 2;
 
   a {
     font-weight: bold;
@@ -94,6 +102,14 @@ export default {
   .login-profile {
     position: absolute;
     right: 40px;
+  }
+
+  .v-image {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 40px;
+    padding: 10px;
   }
 }
 
