@@ -16,6 +16,7 @@
         </div>
         <div class="login-profile" v-if="authState === 'signedin' && user">
           <router-link to="/profile"> {{ user.username }} </router-link>
+          <router-link to="/workout">My Workouts</router-link>
         </div>
       </div>
       <div class="view-container">

@@ -11,6 +11,7 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import router from "./router";
 
 import "@aws-amplify/ui-vue";
+import "@aws-amplify/datastore";
 import Amplify from "aws-amplify";
 import awsconfig from "../../src/aws-exports";
 import vuetify from "./plugins/vuetify";
