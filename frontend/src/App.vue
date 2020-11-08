@@ -15,15 +15,29 @@
           <router-link to="/login"> Login </router-link>
         </div>
         <div class="login-profile" v-if="authState === 'signedin'">
-          <router-link
-            :to="{
-              path: `/profile/${user.username}`,
-            }"
+          <b-dropdown
+            id="dropdown-right"
+            right
+            :text="user.username"
+            class="m-md-2"
           >
-            {{ user.username }}
-          </router-link>
-          <router-link to="/workout">My Workouts</router-link>
-          <amplify-sign-out @click="reload()" />
+            <b-dropdown-item>
+              <router-link
+                :to="{
+                  path: `/profile/${user.username}`,
+                }"
+              >
+                Account
+              </router-link>
+            </b-dropdown-item>
+            <b-dropdown-item>
+              <router-link to="/workout">My Workouts</router-link>
+            </b-dropdown-item>
+            <b-dropdown-divider />
+            <b-dropdown-item>
+              <amplify-sign-out @click="reload()" />
+            </b-dropdown-item>
+          </b-dropdown>
         </div>
       </div>
       <div class="view-container">
@@ -116,6 +130,10 @@ export default {
     margin: 10px;
   }
 
+  .dropdown-item {
+    margin: 0px;
+  }
+
   .login-profile {
     position: absolute;
     right: 40px;
@@ -133,5 +151,10 @@ export default {
 form {
   box-shadow: none;
   border: none;
+}
+
+amplify-authenticator {
+  color: tomato;
+  padding: 5px;
 }
 </style>
