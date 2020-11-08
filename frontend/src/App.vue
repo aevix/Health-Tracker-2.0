@@ -12,11 +12,18 @@
           <router-link to="/about"> About </router-link>
         </div>
         <div class="login-profile" v-if="authState !== 'signedin'">
-          <router-link to="/profile"> Login </router-link>
+          <router-link to="/login"> Login </router-link>
         </div>
-        <div class="login-profile" v-if="authState === 'signedin' && user">
-          <router-link to="/profile"> {{ user.username }} </router-link>
+        <div class="login-profile" v-if="authState === 'signedin'">
+          <router-link
+            :to="{
+              path: `/profile/${user.username}`,
+            }"
+          >
+            {{ user.username }}
+          </router-link>
           <router-link to="/workout">My Workouts</router-link>
+          <amplify-sign-out @click="reload()" />
         </div>
       </div>
       <div class="view-container">
@@ -36,12 +43,21 @@ export default {
       this.authState = authState;
       this.user = authData;
     });
+    this.verify();
   },
   data() {
     return {
       user: undefined,
       authState: undefined,
     };
+  },
+  methods: {
+    verify() {
+      console.log(window.location.pathname);
+    },
+    reload() {
+      location.replace("/");
+    },
   },
   beforeDestroy() {
     return onAuthUIStateChange;
