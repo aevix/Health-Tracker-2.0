@@ -1,13 +1,31 @@
 <template>
   <div id="app">
-    <h1>Todo App</h1>
-    <input type="text" v-model="name" placeholder="Todo name" />
-    <input type="text" v-model="description" placeholder="Todo description" />
-    <button v-on:click="createTodo">Create Todo</button>
-    <div v-for="item in todos" :key="item.id">
-      <h3>{{ item.name }}</h3>
-      <p>{{ item.description }}</p>
-    </div>
+    <h1>My Workout</h1>
+    <b-form inline>
+      <b-form-textarea
+        id="textarea-no-resize"
+        class="mb-2 mr-sm-2 mb-sm-0 ml-sm-2"
+        no-resize
+        type="text"
+        v-model="name"
+        placeholder="Workout Name"
+      />
+      <b-form-textarea
+        id="textarea-no-resize"
+        class="mb-2 mr-sm-2 mb-sm-0 ml-sm-2"
+        no-resize
+        type="text"
+        v-model="description"
+        placeholder="Workout Description"
+      />
+      <b-button
+        class="mb-2 mr-sm-2 mb-sm-0 ml-sm-2"
+        variant="outline-primary"
+        v-on:click="createTodo"
+        >Create Todo</b-button
+      >
+    </b-form>
+    <b-table striped hover :items="todos"></b-table>
   </div>
 </template>
 
@@ -48,7 +66,12 @@ export default {
       const todos = await API.graphql({
         query: listTodos,
       });
-      this.todos = todos.data.listTodos.items;
+      for (var i = 0; i < todos.data.listTodos.items.length; i++) {
+        this.todos.push({
+          name: todos.data.listTodos.items[i].name,
+          description: todos.data.listTodos.items[i].description,
+        });
+      }
     },
     subscribe() {
       API.graphql({ query: onCreateTodo }).subscribe({

@@ -10,6 +10,9 @@ export const createTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -24,6 +27,9 @@ export const updateTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -38,8 +44,68 @@ export const deleteTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
+    }
+  }
+`;
+export const createProfile = /* GraphQL */ `
+  mutation CreateProfile(
+    $input: CreateProfileInput!
+    $condition: ModelProfileConditionInput
+  ) {
+    createProfile(input: $input, condition: $condition) {
+      id
+      age
+      gender
+      height
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const updateProfile = /* GraphQL */ `
+  mutation UpdateProfile(
+    $input: UpdateProfileInput!
+    $condition: ModelProfileConditionInput
+  ) {
+    updateProfile(input: $input, condition: $condition) {
+      id
+      age
+      gender
+      height
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const deleteProfile = /* GraphQL */ `
+  mutation DeleteProfile(
+    $input: DeleteProfileInput!
+    $condition: ModelProfileConditionInput
+  ) {
+    deleteProfile(input: $input, condition: $condition) {
+      id
+      age
+      gender
+      height
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+      owner
     }
   }
 `;
