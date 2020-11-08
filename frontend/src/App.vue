@@ -152,9 +152,4 @@ form {
   box-shadow: none;
   border: none;
 }
-
-amplify-authenticator {
-  color: tomato;
-  padding: 5px;
-}
 </style>
