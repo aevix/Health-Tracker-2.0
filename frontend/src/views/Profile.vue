@@ -46,15 +46,6 @@ import * as queries from "../../../src/graphql/queries";
 export default {
   created() {
     this.fetchUserProfile();
-    // console.log(userProfile);
-    // if (userProfile.data.getProfile === null) {
-    //   this.createProfile();
-    //   console.log("it worked");
-    // }
-    // userProfile = this.fetchUserProfile();
-    // this.age = userProfile.getProfile.age;
-    // this.height = userProfile.getProfile.height;
-    // this.gender = userProfile.getProfile.gender;
   },
   data() {
     return {
