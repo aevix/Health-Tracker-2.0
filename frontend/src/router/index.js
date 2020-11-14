@@ -39,7 +39,7 @@ const routes = [
   },
   {
     path: "/charts",
-    name: "/Charts",
+    name: "Charts",
     component: () =>
       import(/* webpackChunkName: "charts" */ "../views/Charts.vue"),
   },

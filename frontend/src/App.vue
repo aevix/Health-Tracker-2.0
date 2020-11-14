@@ -46,15 +46,20 @@
       <div class="view-container">
         <router-view />
       </div>
+      <Footer />
     </div>
   </div>
 </template>
 
 <script>
 import { onAuthUIStateChange } from "@aws-amplify/ui-components";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "HealthTracker",
+  components: {
+    Footer,
+  },
   created() {
     onAuthUIStateChange((authState, authData) => {
       this.authState = authState;

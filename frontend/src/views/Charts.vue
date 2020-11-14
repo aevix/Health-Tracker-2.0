@@ -1,32 +1,36 @@
 <template>
-  <div id="chartDiv" style="width: 100%; height: 400px"></div>
+  <JSCharting :options="options" class="columnChart"></JSCharting>
 </template>
 
 <script>
-import * as JSC from "jscharting";
+import JSCharting from "jscharting-vue";
 
 export default {
-  name: "Charts",
   data() {
     return {
-      data: JSC.csv2Json(
-        "date,actual,goal\n1/1/2018,5409,7000\n1/2/2018,4893,7000"
-      ),
-      points: undefined,
+      name: "columnChart",
+      options: {
+        type: "line",
+        series: [
+          {
+            points: [
+              { x: "A", y: 50 },
+              { x: "B", y: 30 },
+              { x: "C", y: 50 },
+            ],
+          },
+        ],
+      },
     };
   },
-  created() {
-    JSC.Chart("chartDiv", {
-      series: [
-        {
-          points: [{ points: this.points }],
-          xAxis_scale_type: "time",
-        },
-      ],
-    });
-    this.data.map((d) => {
-      return { x: d.date, y: d.actual };
-    });
+  components: {
+    JSCharting,
   },
 };
 </script>
+
+<style>
+.columnChart {
+  height: 300px;
+}
+</style>
