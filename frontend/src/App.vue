@@ -43,10 +43,12 @@
           </b-dropdown>
         </div>
       </div>
-      <div class="view-container">
+      <b-row class="view-container">
         <router-view />
-      </div>
-      <Footer />
+      </b-row>
+      <b-row class="mt-0 mb-0 pt-0 pb-0">
+        <Footer />
+      </b-row>
     </div>
   </div>
 </template>
@@ -102,12 +104,6 @@ export default {
   align-items: center;
   justify-content: center;
   box-shadow: none;
-}
-
-.view-container {
-  display: flex;
-  align-content: center;
-  justify-content: center;
 }
 
 #nav {
