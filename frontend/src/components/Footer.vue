@@ -13,7 +13,7 @@
           <b-card-text>Facebook</b-card-text>
           <b-card-text>Twitter</b-card-text>
           <b-card-text>Instagram</b-card-text>
-          <b-card-text>Linkedin test</b-card-text>
+          <b-card-text>Linkedin</b-card-text>
         </b-card>
 
         <b-card
