@@ -33,9 +33,6 @@
             <b-dropdown-item>
               <router-link to="/workout">My Workouts</router-link>
             </b-dropdown-item>
-            <b-dropdown-item>
-              <router-link to="/charts">My Charts</router-link>
-            </b-dropdown-item>
             <b-dropdown-divider />
             <b-dropdown-item>
               <amplify-sign-out @click="reload()" />
@@ -43,25 +40,18 @@
           </b-dropdown>
         </div>
       </div>
-      <b-row class="view-container">
+      <div class="view-container">
         <router-view />
-      </b-row>
-      <b-row class="mt-0 mb-0 pt-0 pb-0">
-        <Footer />
-      </b-row>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { onAuthUIStateChange } from "@aws-amplify/ui-components";
-import Footer from "./components/Footer.vue";
 
 export default {
   name: "HealthTracker",
-  components: {
-    Footer,
-  },
   created() {
     onAuthUIStateChange((authState, authData) => {
       this.authState = authState;
@@ -104,6 +94,12 @@ export default {
   align-items: center;
   justify-content: center;
   box-shadow: none;
+}
+
+.view-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 #nav {
