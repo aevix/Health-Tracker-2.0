@@ -1,7 +1,7 @@
 <template>
-  <div class="app-container">
+  <div class="app-container ml-0">
     <div id="app">
-      <div id="nav">
+      <div id="nav" class="ml-0">
         <v-img
           src="./assets/logo.png"
           max-width="70"
@@ -43,10 +43,10 @@
           </b-dropdown>
         </div>
       </div>
-      <b-row class="view-container">
+      <b-row class="mt-0 mb-0 mr-0 ml-0 pt-0 pb-0 pr-0 pl-0">
         <router-view />
       </b-row>
-      <b-row class="mt-0 mb-0 pt-0 pb-0">
+      <b-row class="mt-0 mb-0 mr-0 ml-0 pt-0 pb-0 pr-0 pl-0">
         <Footer />
       </b-row>
     </div>
