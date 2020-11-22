@@ -38,7 +38,7 @@
           nobody
           title="Career"
         >
-          <b-card-text>Career Opportunities</b-card-text>
+          <b-card-text>career@healthtracker.com</b-card-text>
         </b-card>
       </b-card-group>
     </b-col>
