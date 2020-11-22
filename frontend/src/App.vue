@@ -46,15 +46,22 @@
       <b-row class="mt-0 mb-0 mr-0 ml-0 pt-0 pb-0 pr-0 pl-0">
         <router-view />
       </b-row>
+      <b-row class="mt-0 mb-0 mr-0 ml-0 pt-0 pb-0 pr-0 pl-0">
+        <Footer />
+      </b-row>
     </div>
   </div>
 </template>
 
 <script>
 import { onAuthUIStateChange } from "@aws-amplify/ui-components";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "HealthTracker",
+  components: {
+    Footer,
+  },
   created() {
     onAuthUIStateChange((authState, authData) => {
       this.authState = authState;
