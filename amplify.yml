@@ -5,6 +5,7 @@ applications:
         preBuild:
           commands:
             - npm ci
+            - npm i --save @vue/compiler-sfc@^3.0.0-beta.14
             - npm i --save @react-native-community/netinfo@5.5.0
             - npm i --save jscharting-vue
             - npm i --save jquery@1.9.1 @vue/compiler-sfc@3.0.0
