@@ -31,7 +31,7 @@
               </router-link>
             </b-dropdown-item>
             <b-dropdown-item>
-              <router-link to="/workout">My Workouts</router-link>
+              <router-link to="/workout">My Workout</router-link>
             </b-dropdown-item>
             <b-dropdown-item>
               <router-link to="/charts">My Charts</router-link>
