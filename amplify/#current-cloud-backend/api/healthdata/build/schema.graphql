@@ -11,10 +11,9 @@ type Todo {
 
 type Profile {
   id: ID!
-  age: Int
-  gender: String
-  ft: Int
-  inches: Int
+  age: Int!
+  gender: String!
+  height: Int!
   _version: Int!
   _deleted: Boolean
   _lastChangedAt: AWSTimestamp!
@@ -193,8 +192,7 @@ input ModelProfileFilterInput {
   id: ModelIDInput
   age: ModelIntInput
   gender: ModelStringInput
-  ft: ModelIntInput
-  inches: ModelIntInput
+  height: ModelIntInput
   and: [ModelProfileFilterInput]
   or: [ModelProfileFilterInput]
   not: ModelProfileFilterInput
@@ -202,10 +200,9 @@ input ModelProfileFilterInput {
 
 input CreateProfileInput {
   id: ID
-  age: Int
-  gender: String
-  ft: Int
-  inches: Int
+  age: Int!
+  gender: String!
+  height: Int!
   _version: Int
 }
 
@@ -213,8 +210,7 @@ input UpdateProfileInput {
   id: ID!
   age: Int
   gender: String
-  ft: Int
-  inches: Int
+  height: Int
   _version: Int
 }
 
@@ -226,8 +222,7 @@ input DeleteProfileInput {
 input ModelProfileConditionInput {
   age: ModelIntInput
   gender: ModelStringInput
-  ft: ModelIntInput
-  inches: ModelIntInput
+  height: ModelIntInput
   and: [ModelProfileConditionInput]
   or: [ModelProfileConditionInput]
   not: ModelProfileConditionInput

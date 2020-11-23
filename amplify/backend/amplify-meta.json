@@ -29,11 +29,12 @@
         "GraphQLAPIIdOutput": "ifesu5neq5h7vesrl2qvnu2c2u",
         "GraphQLAPIEndpointOutput": "https://vwwrxb2q7verjdfu5ktdiod7pm.appsync-api.us-east-2.amazonaws.com/graphql"
       },
-      "lastPushTimeStamp": "2020-11-23T02:14:34.313Z",
+      "lastPushTimeStamp": "2020-11-23T10:12:30.646Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-healthdata-dev-30609-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apihealthdata"
-      }
+      },
+      "lastPushDirHash": "8sGm7yxOcNp5J6+0A5VX+673YH4="
     }
   },
   "auth": {
@@ -51,7 +52,7 @@
         "IdentityPoolName": "healthdata9e769dca_identitypool_9e769dca__dev",
         "UserPoolName": "healthdata9e769dca_userpool_9e769dca"
       },
-      "lastPushTimeStamp": "2020-11-23T02:14:34.318Z",
+      "lastPushTimeStamp": "2020-11-23T10:12:30.628Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-healthdata-dev-30609-deployment/amplify-cfn-templates/auth/healthdata9e769dca-cloudformation-template.yml",
         "logicalId": "authhealthdata9e769dca"
@@ -76,7 +77,7 @@
         "UserGroupRole": "arn:aws:iam::771007682576:role/us-east-2_P7kmKO8QD-UserGroupRole",
         "AdminGroupRole": "arn:aws:iam::771007682576:role/us-east-2_P7kmKO8QD-AdminGroupRole"
       },
-      "lastPushTimeStamp": "2020-11-23T02:14:34.320Z",
+      "lastPushTimeStamp": "2020-11-23T10:12:30.635Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-healthdata-dev-30609-deployment/amplify-cfn-templates/auth/template.json",
         "logicalId": "authuserPoolGroups"

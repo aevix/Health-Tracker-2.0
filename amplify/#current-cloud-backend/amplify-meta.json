@@ -29,12 +29,12 @@
         "GraphQLAPIIdOutput": "ifesu5neq5h7vesrl2qvnu2c2u",
         "GraphQLAPIEndpointOutput": "https://vwwrxb2q7verjdfu5ktdiod7pm.appsync-api.us-east-2.amazonaws.com/graphql"
       },
+      "lastPushTimeStamp": "2020-11-23T10:12:30.646Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-healthdata-dev-30609-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apihealthdata"
       },
-      "lastPushTimeStamp": "2020-11-22T02:36:42.340Z",
-      "lastPushDirHash": "4AYOx5VjbfljQG81xjNgQfqLHos="
+      "lastPushDirHash": "8sGm7yxOcNp5J6+0A5VX+673YH4="
     }
   },
   "auth": {
@@ -43,11 +43,6 @@
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-healthdata-dev-30609-deployment/amplify-cfn-templates/auth/healthdata9e769dca-cloudformation-template.yml",
-        "logicalId": "authhealthdata9e769dca"
-      },
-      "lastPushTimeStamp": "2020-11-22T02:36:42.331Z",
       "output": {
         "AppClientSecret": "12338rve81vp769h8qtss52bgdg7qoqit1qbf6ivdqddl1r90khe",
         "UserPoolId": "us-east-2_P7kmKO8QD",
@@ -57,7 +52,11 @@
         "IdentityPoolName": "healthdata9e769dca_identitypool_9e769dca__dev",
         "UserPoolName": "healthdata9e769dca_userpool_9e769dca"
       },
-      "lastPushDirHash": "OoBf11PcMaPhJLfFpVRxPVWn7w8="
+      "lastPushTimeStamp": "2020-11-23T10:12:30.628Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-healthdata-dev-30609-deployment/amplify-cfn-templates/auth/healthdata9e769dca-cloudformation-template.yml",
+        "logicalId": "authhealthdata9e769dca"
+      }
     },
     "userPoolGroups": {
       "service": "Cognito-UserPool-Groups",
@@ -74,16 +73,15 @@
           ]
         }
       ],
-      "lastPushTimeStamp": "2020-11-22T02:36:42.335Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-healthdata-dev-30609-deployment/amplify-cfn-templates/auth/template.json",
-        "logicalId": "authuserPoolGroups"
-      },
       "output": {
         "UserGroupRole": "arn:aws:iam::771007682576:role/us-east-2_P7kmKO8QD-UserGroupRole",
         "AdminGroupRole": "arn:aws:iam::771007682576:role/us-east-2_P7kmKO8QD-AdminGroupRole"
       },
-      "lastPushDirHash": "CgahQXf0m9xdB5s25NuFD2etchg="
+      "lastPushTimeStamp": "2020-11-23T10:12:30.635Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-healthdata-dev-30609-deployment/amplify-cfn-templates/auth/template.json",
+        "logicalId": "authuserPoolGroups"
+      }
     }
   },
   "function": {},
