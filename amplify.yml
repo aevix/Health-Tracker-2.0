@@ -7,6 +7,7 @@ applications:
             - npm ci
             - npm i --save jscharting-vue
             - npm i --save jquery@1.9.1
+            - npm i --save @vue/compiler-sfc@3.0.0
         build:
           commands:
             - npm run build
