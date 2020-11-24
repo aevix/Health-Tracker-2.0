@@ -1,0 +1,12 @@
+type Todo @model @auth(rules: [{ allow: owner, operations: [create, update, delete] }]) {
+  id: ID!
+  name: String!
+  description: String
+}
+
+type Profile @model @auth(rules: [{ allow: owner, operations: [create, update, delete, read] }]) {
+  id: ID!
+  age: Int!
+  gender: String!
+  height: Int!
+}
