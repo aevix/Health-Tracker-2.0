@@ -43,10 +43,10 @@
           </b-dropdown>
         </div>
       </div>
-      <b-row class="mt-0 mb-0 mr-0 ml-0 pt-0 pb-0 pr-0 pl-0">
+      <b-row class="m-0 pt-0">
         <router-view />
       </b-row>
-      <b-row class="mt-0 mb-0 mr-0 ml-0 pt-0 pb-0 pr-0 pl-0">
+      <b-row class="m-0 p-0">
         <Footer />
       </b-row>
     </div>
