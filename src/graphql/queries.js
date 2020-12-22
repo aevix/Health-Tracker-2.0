@@ -82,7 +82,8 @@ export const syncProfiles = /* GraphQL */ `
         id
         age
         gender
-        height
+        ft
+        inches
         _version
         _deleted
         _lastChangedAt
@@ -101,7 +102,8 @@ export const getProfile = /* GraphQL */ `
       id
       age
       gender
-      height
+      ft
+      inches
       _version
       _deleted
       _lastChangedAt
@@ -122,7 +124,8 @@ export const listProfiles = /* GraphQL */ `
         id
         age
         gender
-        height
+        ft
+        inches
         _version
         _deleted
         _lastChangedAt

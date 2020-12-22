@@ -6,5 +6,34 @@
             "ConflictHandler": "AUTOMERGE",
             "ConflictDetection": "VERSION"
         }
+    },
+    "StackMapping": {
+        "ProfileTable": "Profile",
+        "ProfileIAMRole": "Profile",
+        "ProfileDataSource": "Profile",
+        "SyncProfileResolver": "Profile",
+        "GetProfileResolver": "Profile",
+        "ListProfileResolver": "Profile",
+        "CreateProfileResolver": "Profile",
+        "UpdateProfileResolver": "Profile",
+        "DeleteProfileResolver": "Profile",
+        "SubscriptiononCreateProfileResolver": "Profile",
+        "SubscriptiononUpdateProfileResolver": "Profile",
+        "SubscriptiononDeleteProfileResolver": "Profile",
+        "GetAttProfileTableStreamArn": "Profile",
+        "GetAttProfileDataSourceName": "Profile",
+        "GetAttProfileTableName": "Profile",
+        "TodoTable": "Todo",
+        "TodoIAMRole": "Todo",
+        "TodoDataSource": "Todo",
+        "SyncTodoResolver": "Todo",
+        "GetTodoResolver": "Todo",
+        "ListTodoResolver": "Todo",
+        "CreateTodoResolver": "Todo",
+        "UpdateTodoResolver": "Todo",
+        "DeleteTodoResolver": "Todo",
+        "GetAttTodoTableStreamArn": "Todo",
+        "GetAttTodoDataSourceName": "Todo",
+        "GetAttTodoTableName": "Todo"
     }
 }

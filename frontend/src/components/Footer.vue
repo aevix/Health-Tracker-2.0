@@ -6,7 +6,6 @@
         border-variant="none"
         text-variant="white"
         align="center"
-        nobody
         title="Connect"
         class="rounded-0"
       >
@@ -21,7 +20,6 @@
         border-variant="none"
         text-variant="white"
         align="center"
-        nobody
         title="Contact Us"
       >
         <b-card-text>someemail@gmail.com</b-card-text>
@@ -35,7 +33,6 @@
         border-variant="none"
         text-variant="white"
         align="center"
-        nobody
         title="Career"
         class="rounded-0"
       >
@@ -46,6 +43,6 @@
 </template>
 <script>
 export default {
-  name: "footer",
+  name: "footerComponent",
 };
 </script>

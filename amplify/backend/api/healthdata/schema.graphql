@@ -6,7 +6,8 @@ type Todo @model @auth(rules: [{ allow: owner, operations: [create, update, dele
 
 type Profile @model @auth(rules: [{ allow: owner, operations: [create, update, delete, read] }]) {
   id: ID!
-  age: Int!
-  gender: String!
-  height: Int!
+  age: Int
+  gender: String
+  ft: Int
+  inches: Int
 }
