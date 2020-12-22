@@ -61,7 +61,8 @@ export const createProfile = /* GraphQL */ `
       id
       age
       gender
-      height
+      ft
+      inches
       _version
       _deleted
       _lastChangedAt
@@ -80,7 +81,8 @@ export const updateProfile = /* GraphQL */ `
       id
       age
       gender
-      height
+      ft
+      inches
       _version
       _deleted
       _lastChangedAt
@@ -99,7 +101,8 @@ export const deleteProfile = /* GraphQL */ `
       id
       age
       gender
-      height
+      ft
+      inches
       _version
       _deleted
       _lastChangedAt
