@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <amplify-authenticator>
+  <div class="row">
+    <amplify-authenticator class="mx-auto">
       <div v-if="authState === 'signedin' && user">
         <div>Hello, {{ user.username }}</div>
       </div>
